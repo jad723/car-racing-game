@@ -65,6 +65,12 @@ namespace Car_Racing_Game
 
             if (goright == true && player.Left < 415) player.Left += playerSpeed;
 
+            roadTrack1.Top += roadSpeed;
+            roadTrack2.Top += roadSpeed;
+
+            if(roadTrack2.Top > 519) roadTrack2.Top = -519;
+
+            if (roadTrack1.Top > 519) roadTrack1.Top = -519;
         }
 
         private void changeAIcars(PictureBox tempCar)
