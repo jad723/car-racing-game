@@ -78,6 +78,24 @@ namespace Car_Racing_Game
             if (AI1.Top > 530) changeAIcars(AI1);
 
             if (AI2.Top > 530) changeAIcars(AI2);
+
+            if (player.Bounds.IntersectsWith(AI1.Bounds) || player.Bounds.IntersectsWith(AI2.Bounds)) gameOver();
+
+            if (score > 40 && score < 500) award.Image = Properties.Resources.bronze;
+
+            if(score > 500 && score < 2000)
+            {
+                award.Image = Properties.Resources.silver;
+                roadSpeed = 20;
+                trafficSpeed = 22;
+            }
+
+            if(score > 2000)
+            {
+                award.Image = Properties.Resources.gold;
+                trafficSpeed = 27;
+                roadSpeed = 25;
+            }
         }
 
         private void changeAIcars(PictureBox tempCar)
