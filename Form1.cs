@@ -71,10 +71,64 @@ namespace Car_Racing_Game
             if(roadTrack2.Top > 519) roadTrack2.Top = -519;
 
             if (roadTrack1.Top > 519) roadTrack1.Top = -519;
+
+            AI1.Top += trafficSpeed;
+            AI2.Top += trafficSpeed;
+
+            if (AI1.Top > 530) changeAIcars(AI1);
+
+            if (AI2.Top > 530) changeAIcars(AI2);
         }
 
         private void changeAIcars(PictureBox tempCar)
         {
+            carImage = rand.Next(1, 9);
+
+            switch (carImage)
+            {
+                case 1:
+                    tempCar.Image = Properties.Resources.ambulance;
+                    break;
+
+                case 2:
+                    tempCar.Image = Properties.Resources.carGreen;
+                    break;
+
+                case 3:
+                    tempCar.Image = Properties.Resources.carGrey;
+                    break;
+
+                case 4:
+                    tempCar.Image = Properties.Resources.carOrange;
+                    break;
+
+                case 5:
+                    tempCar.Image = Properties.Resources.carPink;
+                    break;
+
+                case 6:
+                    tempCar.Image = Properties.Resources.CarRed;
+                    break;
+
+                case 7:
+                    tempCar.Image = Properties.Resources.carYellow;
+                    break;
+
+                case 8:
+                    tempCar.Image = Properties.Resources.TruckBlue;
+                    break;
+
+                case 9:
+                    tempCar.Image = Properties.Resources.TruckWhite;
+                    break;
+
+            }
+
+            tempCar.Top = carPosition.Next(100, 400) * -1;
+
+            if((string) tempCar.Tag == "carLeft") tempCar.Left = carPosition.Next(5, 200);
+
+            if((string) tempCar.Tag == "carRight") tempCar.Left = carPosition.Next(245, 422);
 
         }
 
