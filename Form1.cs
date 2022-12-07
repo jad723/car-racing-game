@@ -155,7 +155,17 @@ namespace Car_Racing_Game
 
         private void gameOver()
         {
+            playSound();
+            gameTimer.Stop();
+            explosion.Visible = true;
+            player.Controls.Add(explosion);
+            explosion.Location = new Point(-8, 5);
+            explosion.BackColor = Color.Transparent;
 
+            award.Visible = true;
+            award.BringToFront();
+
+            buttonStart.Enabled = true;
         }
 
         private void ResetGame()
