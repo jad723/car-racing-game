@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.roadTrack1 = new System.Windows.Forms.PictureBox();
             this.roadTrack2 = new System.Windows.Forms.PictureBox();
@@ -76,16 +76,16 @@
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // textScore
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 539);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Score: 0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.textScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textScore.Location = new System.Drawing.Point(12, 539);
+            this.textScore.Name = "textScore";
+            this.textScore.Size = new System.Drawing.Size(475, 23);
+            this.textScore.TabIndex = 2;
+            this.textScore.Text = "Score: 0";
+            this.textScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textScore.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -181,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 781);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textScore);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -206,7 +206,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label textScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox AI2;
         private System.Windows.Forms.PictureBox AI1;
