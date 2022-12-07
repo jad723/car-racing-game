@@ -31,16 +31,6 @@ namespace Car_Racing_Game
             ResetGame();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void keyisdown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Left) goleft = true;
@@ -165,7 +155,7 @@ namespace Car_Racing_Game
             award.Visible = true;
             award.BringToFront();
 
-            buttonStart.Enabled = true;
+            buttonStart.Enabled = true; 
         }
 
         private void ResetGame()
@@ -188,6 +178,11 @@ namespace Car_Racing_Game
             AI2.Left = carPosition.Next(245, 422);
 
             gameTimer.Start(); 
+        }
+
+        private void restartGame(object sender, EventArgs e)
+        {
+            ResetGame();
         }
 
         private void playSound()
