@@ -187,7 +187,8 @@ namespace Car_Racing_Game
 
         private void playSound()
         {
-
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.hit);
+            playCrash.Play();
         }
     }
 }
