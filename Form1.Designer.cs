@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.roadTrack1 = new System.Windows.Forms.PictureBox();
@@ -39,7 +39,7 @@
             this.AI1 = new System.Windows.Forms.PictureBox();
             this.AI2 = new System.Windows.Forms.PictureBox();
             this.explosion = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.award = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack1)).BeginInit();
@@ -48,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AI1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.award)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.AI2);
             this.panel1.Controls.Add(this.AI1);
             this.panel1.Controls.Add(this.explosion);
-            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.award);
             this.panel1.Controls.Add(this.player);
             this.panel1.Controls.Add(this.roadTrack2);
             this.panel1.Controls.Add(this.roadTrack1);
@@ -66,15 +66,15 @@
             this.panel1.Size = new System.Drawing.Size(475, 519);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // buttonStart
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(207, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.Location = new System.Drawing.Point(207, 575);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(84, 40);
+            this.buttonStart.TabIndex = 1;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -137,6 +137,7 @@
             this.AI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.AI1.TabIndex = 1;
             this.AI1.TabStop = false;
+            this.AI1.Tag = "carLeft";
             // 
             // AI2
             // 
@@ -147,6 +148,7 @@
             this.AI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.AI2.TabIndex = 1;
             this.AI2.TabStop = false;
+            this.AI2.Tag = "carRight";
             // 
             // explosion
             // 
@@ -158,15 +160,15 @@
             this.explosion.TabIndex = 1;
             this.explosion.TabStop = false;
             // 
-            // pictureBox5
+            // award
             // 
-            this.pictureBox5.Image = global::Car_Racing_Game.Properties.Resources.bronze;
-            this.pictureBox5.Location = new System.Drawing.Point(122, 204);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(250, 100);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
+            this.award.Image = global::Car_Racing_Game.Properties.Resources.bronze;
+            this.award.Location = new System.Drawing.Point(122, 204);
+            this.award.Name = "award";
+            this.award.Size = new System.Drawing.Size(250, 100);
+            this.award.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.award.TabIndex = 1;
+            this.award.TabStop = false;
             // 
             // gameTimer
             // 
@@ -180,7 +182,7 @@
             this.ClientSize = new System.Drawing.Size(499, 781);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Car Racing Game";
@@ -195,7 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AI1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.award)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,13 +205,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox AI2;
         private System.Windows.Forms.PictureBox AI1;
         private System.Windows.Forms.PictureBox explosion;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox award;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox roadTrack2;
         private System.Windows.Forms.PictureBox roadTrack1;
