@@ -61,9 +61,9 @@ namespace Car_Racing_Game
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
-            if(goleft == true && player.Left > 5) player.Left -= playerSpeed;
+            if(goleft == true && player.Left > 10) player.Left -= playerSpeed;
 
-            if (goright == true && player.Left < 422) player.Left += playerSpeed;
+            if (goright == true && player.Left < 415) player.Left += playerSpeed;
 
         }
 
