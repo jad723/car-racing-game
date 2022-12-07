@@ -177,6 +177,9 @@ namespace Car_Racing_Game
             AI2.Top = carPosition.Next(200, 500) * -1;
             AI2.Left = carPosition.Next(245, 422);
 
+            player.Top = 403;
+            player.Left = 229;
+
             gameTimer.Start(); 
         }
 
